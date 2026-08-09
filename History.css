@@ -1,0 +1,124 @@
+/* styles.css */
+
+/* Basic styles for the body */
+body {
+    font-family: 'Georgia', serif; /* Font style */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(images/veg.jpg); /* Background image with gradient */
+    color: white; /* Text color */
+}
+
+/* Container for the main content */
+.container {
+    width: 90%; /* Full width with a max limit */
+    max-width: 1100px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 40px; /* Space inside the container */
+}
+
+/* Header styles */
+.header {
+    text-align: center; /* Centered text */
+    margin-bottom: 50px; /* Space below the header */
+}
+
+.header h1 {
+    font-size: 40px; /* Size of the main title */
+    color: white; /* Title color */
+}
+
+.header p {
+    font-size: 18px; /* Size of the paragraph */
+    line-height: 1.6; /* Space between lines */
+    max-width: 800px; /* Maximum width for the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Timeline layout */
+.timeline {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Individual period styles */
+.period {
+    display: flex; /* Flexbox for period */
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Space inside each period */
+    margin-bottom: 20px; /* Space below each period */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.period:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Image styles */
+.period img {
+    width: 100%; /* Full width for images */
+    max-width: 500px; /* Maximum width for images */
+    border-radius: 8px; /* Rounded corners for images */
+    object-fit: cover; /* Cover the image area */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for images */
+    transition: transform 0.3s ease; /* Transition for scaling */
+}
+
+.period img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Text styles */
+.text {
+    width: 100%; /* Full width for text */
+    margin-left: 30px; /* Space to the left of text */
+}
+
+.text h2 {
+    font-size: 24px; /* Size for section titles */
+    color: #2c3e50; /* Title color */
+    margin-bottom: 15px; /* Space below titles */
+}
+
+.text p {
+    font-size: 18px; /* Size for paragraph text */
+    color: #34495e; /* Paragraph color */
+    line-height: 1.8; /* Space between lines */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+/* Button styles */
+.text button {
+    padding: 12px 25px; /* Space inside buttons */
+    font-size: 18px; /* Size for button text */
+    color: #fff; /* Text color for buttons */
+    background-color: #FAC000; /* Button background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.text button:hover {
+    background-color: #e0a800; /* Darker button background on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media screen and (max-width: 800px) {
+    .container { padding: 24px 16px; }
+    .header h1 { font-size: 30px; }
+    .header p { font-size: 16px; }
+
+    .period { flex-direction: column; padding: 16px; }
+    .period img { max-width: 100%; }
+    .text { margin-left: 0; margin-top: 16px; }
+    .text h2 { font-size: 20px; }
+    .text p { font-size: 16px; }
+}

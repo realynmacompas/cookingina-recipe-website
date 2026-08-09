@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    margin: 0; /* No margin around the body */
+    padding: 0; /* No padding around the body */
+    text-align: center; /* Center all text */
+    font-family: 'Georgia', serif; /* Use Georgia font */
+}
+
+/* Home Section */
+.home {
+    width: 100%; /* Full width for the home section */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url(images/veg.jpg); /* Background image with gradient */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    margin-top: 70px; /* Space above the section */
+}
+
+/* Section Styles */
+.section, .member {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin: 40px auto; /* Space around sections */
+    width: 80%; /* Width of the section */
+    max-width: 1200px; /* Max width for larger screens */
+    height: 500px; /* Fixed height for sections */
+    padding: 20px; /* Padding inside the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    border-radius: 8px; /* Round corners */
+}
+
+.section {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%); /* Light background for About Us */
+}
+
+.member {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 50%); /* Slightly darker for member profiles */
+}
+
+/* Image Styles */
+.section img, .member img {
+    border-radius: 8px; /* Round corners of images */
+}
+
+.section img {
+    width: 50%; /* Width for About Us image */
+    height: 100%; /* Full height for the image */
+}
+
+.member img {
+    width: 350px; /* Fixed size for member images */
+    height: 350px; /* Keep them square */
+    margin-left: 40px; /* Space on the left */
+    margin-right: 40px; /* Space on the right */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+.member img:hover {
+    transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+/* Content Styles */
+.section .content, .member-content {
+    width: 50%; /* Text content takes half the space */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Padding on the left */
+}
+
+.section h2 {
+    font-size: 60px; /* Big font for section heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.section p, .member p {
+    font-family: 'Georgia', serif; /* Use the same font for paragraphs */
+}
+
+.section p {
+    font-size: 20px; /* Size for About Us paragraph */
+}
+
+.member h2 {
+    font-size: 30px; /* Size for member titles */
+}
+
+.member p {
+    font-size: 18px; /* Size for member descriptions */
+    margin: 5px 0; /* Space above and below paragraphs */
+}
+
+/* Icon Styles */
+.icons, .icons1 {
+    display: flex; /* Use flexbox for icon layout */
+    margin-top: 30px; /* Space above icons */
+}
+
+.icons {
+    margin-top: 100px; /* Extra space for member icons */
+    width: 300px; /* Fixed width for icon container */
+}
+
+.icons a, .icons1 a {
+    text-decoration: none; /* No underline on links */
+    color: black; /* Default color for icons */
+    margin: 0 10px; /* Space between icons */
+}
+
+.icons ion-icon, .icons1 ion-icon {
+    font-size: 30px; /* Size for social media icons */
+    transition: color 0.3s; /* Smooth color change on hover */
+}
+
+.icons a:hover ion-icon, .icons1 a:hover ion-icon {
+    color: #FAC000; /* Change color on hover */
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media screen and (max-width: 992px) {
+    .section, .member {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        padding: 24px;
+    }
+
+    .section img { width: 100%; height: 260px; object-fit: cover; }
+    .member img { width: 220px; height: 220px; margin: 0 0 16px; }
+
+    .section .content, .member-content {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    .section h2 { font-size: 42px; }
+    .icons { margin-top: 20px; width: auto; justify-content: center; }
+    .icons1 { justify-content: center; }
+}
+
+@media screen and (max-width: 600px) {
+    .home { margin-top: 60px; }
+    .section, .member { width: 92%; padding: 16px; margin: 24px auto; }
+    .section h2 { font-size: 32px; }
+    .section p { font-size: 17px; }
+    .member img { width: 160px; height: 160px; }
+    .member h2 { font-size: 24px; }
+}

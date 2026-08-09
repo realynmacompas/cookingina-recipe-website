@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="Contacts.css">
+    <!-- Link to Ionicons for icons -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- Title of the webpage -->
+    <title>Contact Us</title>
+</head>
+<body>
+    <div id="bg_design">
+        <div class="container">
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions? Feel free to contact us:</p><br><br>
+                <p>Email: cookingina@gmail.com</p><br><br>
+                <p>Phone: 0994 346 5703</p><br><br><br>
+                <div class="icons">
+                    <!-- Social media links with icons -->
+                    <a href="https://www.facebook.com/profile.php?id=61566510955007&mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.facebook.com/profile.php?id=61566510955007&mibextid=ZbWKwL"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.facebook.com/profile.php?id=61566510955007&mibextid=ZbWKwL"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="index.html"><ion-icon name="arrow-back"></ion-icon></a>
+                </div>
+            </div>
+
+            <!-- Send Message Form Section -->
+            <div class="form">
+                <form onsubmit="alertOnFormSubmit(event)"> <!-- Call showAlert function on form submission -->
+                    <h2>Send Us a Message</h2>
+                    <!-- Input fields for user information -->
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="phone" placeholder="Phone Number" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                    <!-- Submit button -->
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show alert on form submission
+        function alertOnFormSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            window.alert("Your message has been sent!"); // Show alert to the user
+        }
+    </script>
+</body>
+</html>

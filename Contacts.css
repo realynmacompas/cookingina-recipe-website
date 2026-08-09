@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Set font */
+    background-color: #f9f9f9; /* Light background */
+}
+
+/* Background design */
+#bg_design {
+    width: 100%; /* Full width */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/veg.jpg); /* Gradient and image */
+    background-position: center; /* Center image */
+    background-size: cover; /* Cover area */
+    height: 105vh; /* Full height */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Container */
+.container {
+    width: 90%; /* Container width */
+    max-width: 1000px; /* Max width */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)); /* Gradient background */
+    padding: 20px; /* Inner padding */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Shadow effect */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Contact Info Section */
+.contact-info {
+    margin-left: 30px; /* Left margin */
+    width: 45%; /* Section width */
+    text-align: left; /* Left align text */
+}
+
+.contact-info h2 {
+    font-size: 60px; /* Heading size */
+    margin-bottom: 10px; /* Space below */
+}
+
+.contact-info p {
+    font-size: 20px; /* Paragraph size */
+    margin: 5px 0; /* Vertical margin */
+}
+
+.icons {
+    margin-top: 10px; /* Space above icons */
+}
+
+.icons a {
+    text-decoration: none; /* No underline */
+    margin-right: 10px; /* Space between icons */
+    color: #555; /* Default color */
+    font-size: 24px; /* Icon size */
+}
+
+
+/* Form Section */
+.form {
+    width: 45%; /* Section width */
+    text-align: left; /* Left align text */
+    margin-top: 20px; /* Top margin */
+}
+
+.form h2 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 20px; /* Space below */
+}
+
+input, textarea {
+    width: 90%; /* Input width */
+    margin-bottom: 15px; /* Space below */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Text size */
+}
+
+textarea {
+    height: 100px; /* Textarea height */
+}
+
+button {
+    padding: 10px 20px; /* Button padding */
+    background-color: #FAC000; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: ease .4s; /* Transition effect */
+}
+
+button:hover {
+    background-color: black; /* Hover color */
+}
+
+/* Icon Styles */
+.icons a, .icons1 a {
+    text-decoration: none; /* No underline */
+    color: black; /* Default color */
+    margin: 0 10px; /* Space between */
+}
+
+.icons ion-icon, .icons1 ion-icon {
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Transition effect */
+}
+
+.icons a:hover ion-icon, .icons1 a:hover ion-icon {
+    color: #FAC000; /* Hover color */
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media screen and (max-width: 900px) {
+    #bg_design { height: auto; padding: 100px 16px; }
+    .container { flex-direction: column; gap: 24px; }
+    .contact-info, .form { width: 100%; margin-left: 0; }
+    .contact-info h2 { font-size: 42px; }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-info h2 { font-size: 32px; }
+    .contact-info p { font-size: 17px; }
+    input, textarea { width: 100%; }
+}

@@ -1,0 +1,162 @@
+/* =====================================================================
+   COOKINGINA — LEARN MORE PAGE
+   Rewritten to match the site's gold/cream theme and to remove the
+   fixed-height rules that caused oversized blank space and overflow.
+   ===================================================================== */
+
+:root {
+  --gold: #FAC000;
+  --gold-deep: #D9A404;
+  --gold-soft: #FFF4D6;
+  --cream: #FFFDF7;
+  --forest: #2E6F40;
+  --forest-dark: #1F4D2C;
+  --ink: #2B2118;
+  --shadow: 0 4px 16px rgba(43, 33, 24, 0.12);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: var(--cream);
+    color: var(--ink);
+}
+
+/* Home Section wrapper */
+.home {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url(images/veg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px; /* height now grows with content instead of a fixed 350vh */
+}
+
+/* Map Container */
+.map-container {
+    width: 400px;
+    margin-left: 40px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(43, 33, 24, 0.3);
+}
+
+/* General content box */
+.section {
+    display: flex;
+    align-items: center;
+    background: var(--cream);
+    margin: 40px auto 0;
+    width: 90%;
+    max-width: 1140px;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gold-soft);
+}
+
+/* Content within the section */
+.section .content {
+    width: 50%;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(34px, 5vw, 56px);
+    color: var(--forest-dark);
+    margin-bottom: 16px;
+}
+
+.section p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #4a4033;
+}
+
+/* Luzon, Visayas, and Mindanao Sections */
+.luzon, .visayas, .mindanao {
+    width: 100%;
+    max-width: 1140px;
+    margin: 40px auto 0;
+    padding: 32px;
+    border-radius: 14px;
+    background: var(--cream);
+    color: var(--ink);
+    border: 1px solid var(--gold-soft);
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.luzon:hover, .visayas:hover, .mindanao:hover {
+    background-color: var(--gold-soft);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(43, 33, 24, 0.18);
+}
+
+.luzon h3, .visayas h3, .mindanao h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--forest-dark);
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.luzon h4, .visayas h4, .mindanao h4 {
+    color: var(--forest);
+    margin-bottom: 6px;
+}
+
+.luzon b, .visayas b, .mindanao b {
+    font-size: 18px;
+    color: var(--forest-dark);
+}
+
+.luzon p, .visayas p, .mindanao p {
+    font-size: 16px;
+    color: #4a4033;
+    line-height: 1.8;
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media screen and (max-width: 1250px) {
+    .luzon, .visayas, .mindanao {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .section {
+        flex-direction: column;
+        width: 90%;
+        padding: 24px;
+    }
+
+    .section .content { width: 100%; padding-left: 0; text-align: center; }
+
+    .map-container { width: 100%; margin-left: 0; margin-top: 20px; }
+    .map-container iframe { width: 100%; }
+}
+
+@media screen and (max-width: 600px) {
+    .home { padding-top: 20px; padding-bottom: 40px; }
+    .section { width: 92%; padding: 20px; margin-top: 24px; }
+    .section p { font-size: 16px; }
+
+    .luzon, .visayas, .mindanao { margin-left: 12px; margin-right: 12px; padding: 20px; }
+    .luzon h3, .visayas h3, .mindanao h3 { font-size: 22px; }
+}

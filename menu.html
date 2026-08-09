@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+      <div class="header">
+        <!-- a class named navbar for where the logo and button of section will be placed -->
+        <div class="navbar">    
+            <div class="icon">
+                <h2 class="logo">
+                    <img src="logo.png" width="100" alt="">CookingIna
+                </h2>
+            </div>     
+            <div class="menu">
+                <ul>
+                    <!-- Navigation links -->
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#"> </a></li>
+                    <li><a href="Contacts.html">CONTACTS</a></li>
+                    <li><a href="History.html">HISTORY</a></li>
+                    <li><a href="LearnMore.html">LEARNMORE</a></li>
+                    <li><a href="Aboutus.html">ABOUTUS</a></li>
+                </ul>
+            </div>       
+        </div>
+    </div>
+
+<!-- Main Section with slider -->
+    <div class="home">
+
+        <!--Slider 1-->
+        <div class="slider">
+            <div class="slide active" style="background-image: url('pics/v1.jpg')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>Vegetable</h1>
+                        <p>Discover delicious vegetable dishes that showcase fresh, natural flavors, perfect for healthy and flavorful meals.</p>
+                        <a href="vegetable.html">See Menu</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Slider 2-->
+            <div class="slide" style="background-image: url('pics/c1.jpg')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>Chicken</h1>
+                        <p>Enjoy flavorful chicken dishes, from juicy roasts to savory curries, crafted for delicious and versatile meals.</p>
+                        <a href="chicken.html">See Menu</a>
+                    </div>
+                </div>
+            </div>
+
+
+        <!--Slider 3-->
+        <div class="slide" style="background-image: url('pics/p1.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>Pork</h1>
+                    <p>Savor hearty pork dishes packed with rich flavors, from tender roasts to savory stir-fries, perfect for any occasion.</p>
+                    <a href="pork.html">See Menu</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Slider 4-->
+            <div class="slide" style="background-image: url('pics/b1.jpg')">
+                <div class="container">
+                    <div class="caption">
+                        <h1>Beef</h1>
+                        <p>Indulge in hearty beef dishes, featuring rich flavors and tender cuts, perfect for comforting and satisfying meals.</p>
+                        <a href="beef.html">See Menu</a>
+                    </div>
+                </div>
+            </div>
+
+        <!--Slider 5-->
+        <div class="slide" style="background-image: url('pics/f1.jpg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>Seafood</h1>
+                    <p>Delight in fresh seafood dishes, offering a taste of the ocean with vibrant, flavorful, and wholesome creations.</p>
+                    <a href="seafood.html">See Menu</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!--controls-->
+        <div class="controls">
+            <div class="prev"><big><big> < </big></big></div>
+            <div class="next"><big><big> > </big></big></div>
+
+        </div>
+
+    </div>
+
+<!-- Menu Container -->
+  <div class="menu-container" id="menu">
+    <div class="content">
+      <h1 class="title">MENU</h1>
+      <div class="tabs">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Vegetable');" id="myLink" class="tab">Vegetable</a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Chicken');" class="tab">Chicken</a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Pork');" class="tab">Pork</a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Beef');" class="tab">Beef</a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Seafood');" class="tab">Seafood</a>
+      </div>
+
+<!--Vegetable Dishes-->
+    <div id="Vegetable" class="menu-section">
+
+        <!--Chop Suey-->
+        <img class="pics" src="pics/v1.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                 <p>a. 1 carrot</p>
+                <p>b. 4 cloves garlic</p>
+                <p>c. 1 onion</p>
+                <p>d. 1/4 cup dried shrimp</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <h1><b>Chop Suey</b><a class="btn" href="vegetable.html#chop-suey">See Recipe</a></h1>
+        <p>Tasty mix of veggies, meat, and sauce, perfect with rice or noodles.</p>
+        <hr>
+        
+        <!--Ginataang Kalabasa-->
+        <img class="pics" src="pics/v2.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. Squash (kalabasa), cubed</p>
+    <p>b. Coconut milk</p>
+    <p>c. Shrimp or dried fish</p>
+    <p>d. Garlic, onions, and ginger</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Ginataang Kalabasa</b><a class="btn" href="vegetable.html#ginataang-kalabasa">See Recipe</a></h1>
+        <p>Creamy mix of squash and coconut milk with savory flavors.</p>
+        <hr>
+
+        <!--Lumpiang Ubod-->
+        <img class="pics" src="pics/v3.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. Wrapper (fresh lumpia skin)</p>
+    <p>b. Mixed vegetables (carrots, cabbage, beans)</p>
+    <p>c. Garlic, minced</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Lumpiang Ubod</b><a class="btn" href="vegetable.html#lumpiang-ubod">See Recipe</a></h1>
+        <p>Fresh spring roll with heart of palm and savory filling.</p>
+        <hr>
+
+        <!--Lumpiang Buko-Togue-->
+        <img class="pics" src="pics/v4.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. Wrapper (fresh lumpia skin)</p>
+    <p>b. Mixed vegetables (carrots, cabbage, beans)</p>
+    <p>c. Garlic, minced</p>
+    <p>d. Onion, chopped</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Lumpiang Buko-Togue</b><a class="btn" href="vegetable.html#lumpiang-buko-togue">See Recipe</a></h1>
+        <p>Crispy spring roll filled with coconut and mung bean sprouts.</p>
+        <hr>
+
+        <!--Tinortang Talong-->
+        <img class="pics" src="pics/v5.jpeg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. Eggplants (talong)</p>
+    <p>b. Eggs</p>
+    <p>c. Salt</p>
+    <p>d. Cooking oil</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Tinortang Talong</b><a class="btn" href="vegetable.html#tortang-talong">See Recipe</a></h1>
+        <p>Eggplant omelette with a smoky, savory flavor.</p>
+    </div>
+
+<!--Chicken Dishes-->
+      <div id="Chicken" class="menu-section">
+
+        <!--Adobong Manok-->
+        <img class="pics" src="pics/c1.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. Chicken</p>
+    <p>b. Soy sauce</p>
+    <p>c. Vinegar</p>
+    <p>d. Garlic</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <h1><b>Adobong Manok</b><a class="btn" href="chicken.html#adobong-manok">See Recipe</a></h1>
+        <p>Rich blend of tender chicken, soy sauce, vinegar, garlic, and spices.</p>
+        <hr>
+        
+        <!--Afritada-->
+        <img class="pics" src="pics/c2.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. Chicken</p>
+    <p>b. Tomato sauce</p>
+    <p>c. Potatoes</p>
+    <p>d. Carrots</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Afritada</b><a class="btn" href="chicken.html#afritada">See Recipe</a></h1>
+        <p>Savory mix of chicken, tomato sauce, potatoes, carrots, and bell peppers.</p>
+        <hr>
+
+        <!--Kinamatisang Manok-->
+        <img class="pics" src="pics/c3.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. Chicken</p>
+    <p>b. Fresh tomatoes</p>
+    <p>c. Garlic</p>
+    <p>d. Onions</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Kinamatisang Manok</b><a class="btn" href="chicken.html#kinamatisan-na-manok">See Recipe</a></h1>
+        <p>Flavorful combination of chicken, fresh tomatoes, ginger, and leafy greens.</p>
+        <hr>
+
+        <!--Pininyahang Manok-->
+        <img class="pics" src="pics/c4.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. Chicken</p>
+    <p>b. Pineapple chunks</p>
+    <p>c. Pineapple juice</p>
+    <p>d. Bell peppers</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Pininyahang Manok</b><a class="btn" href="chicken.html#pininyahang-manok">See Recipe</a></h1>
+        <p>Creamy chicken stew with pineapple, carrots, and bell peppers.</p>
+        <hr>
+
+        <!--Tinolang Manok-->
+        <img class="pics" src="pics/c5.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. Chicken</p>
+    <p>b. Ginger</p>
+    <p>c. Green papaya</p>
+    <p>d. Malunggay leaves</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Tinolang Manok</b><a class="btn" href="chicken.html#tinola">See Recipe</a></h1>
+        <p>Light chicken soup with ginger, green papaya, and leafy greens.</p>
+    </div>
+
+<!--Pork Dishes-->
+      <div id="Pork" class="menu-section">
+
+        <!--Asadong Baboy-->
+        <img class="pics" src="pics/p1.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. Pork shoulder</p>
+    <p>b. Soy sauce</p>
+    <p>c. Vinegar</p>
+    <p>d. Garlic</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <h1><b>Asadong Baboy</b><a class="btn" href="pork.html#asadong-baboy">See Recipe</a></h1>
+        <p>Savory braised pork with soy sauce, vinegar, garlic, and spices.</p>
+        <hr>
+        
+        <!--Lumpiang Shanghai-->
+        <img class="pics" src="pics/p2.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. Ground pork</p>
+    <p>b. Carrots</p>
+    <p>c. Garlic</p>
+    <p>d. Onion</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Lumpiang Shanghai</b><a class="btn" href="pork.html#lumpiang-shanghai">See Recipe</a></h1>
+        <p>Crispy spring rolls filled with seasoned ground pork, vegetables, and spices.</p>
+        <hr>
+
+        <!--Menudo-->
+        <img class="pics" src="pics/p3.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. Pork cubes</p>
+    <p>b. Liver</p>
+    <p>c. Potatoes</p>
+    <p>d. Carrots</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Menudo</b><a class="btn" href="pork.html#menudo">See Recipe</a></h1>
+        <p>Hearty stew of pork, liver, potatoes, carrots, and tomato sauce.</p>
+        <hr>
+
+        <!--Pochero-->
+        <img class="pics" src="pics/p4.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. Pork belly</p>
+    <p>b. Ripe saba bananas</p>
+    <p>c. Cabbage</p>
+    <p>d. Potatoes</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Pochero</b><a class="btn" href="pork.html#pochero">See Recipe</a></h1>
+        <p>Comforting stew of pork, bananas, potatoes, cabbage, and tomato-based broth.</p>
+        <hr>
+
+        <!--Sinigang Baboy-->
+        <img class="pics" src="pics/p5.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                 <p>a. Pork belly</p>
+    <p>b. Tamarind soup mix</p>
+    <p>c. Water spinach</p>
+    <p>d. Radish</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Sinigang Baboy</b><a class="btn" href="pork.html#sinigang-na-baboy">See Recipe</a></h1>
+        <p>Tangy soup with pork, tamarind broth, and assorted vegetables.</p>
+    </div>
+
+<!--Beef Dishes-->
+    <div id="Beef" class="menu-section">
+
+        <!--Beef Tapa-->
+        <img class="pics" src="pics/b1.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. 1/2 kg beef (thinly sliced)</p>
+    <p>b. 1/4 cup soy sauce</p>
+    <p>c. 2 tablespoons vinegar</p>
+    <p>d. 1 tablespoon sugar</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <h1><b>Beef Tapa</b><a class="btn" href="beef.html#beef-tapa">See Recipe</a></h1>
+        <p>Crispy, marinated beef strips with a savory, slightly sweet flavor.</p>
+        <hr>
+        
+        <!--Beef Steak-->
+        <img class="pics" src="pics/b2.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+     <p>a. 1/2 kg beef sirloin (sliced thinly)</p>
+    <p>b. 1/2 cup soy sauce</p>
+    <p>c. 1/4 cup calamansi juice</p>
+    <p>d. Onions (sliced into rings)</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Beef Steak</b><a class="btn" href="beef.html#beef-bistek">See Recipe</a></h1>
+        <p>Tender beef slices cooked in a savory soy sauce and onion gravy.</p>
+        <hr>
+
+        <!--Beef Caldereta-->
+        <img class="pics" src="pics/b3.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                  <p>a. 1 kg beef (cut into chunks)</p>
+    <p>b. 1 can tomato sauce</p>
+    <p>c. 1 cup liver spread</p>
+    <p>d. Carrots and potatoes (cubed)</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Beef Caldereta</b><a class="btn" href="beef.html#beef-caldereta">See Recipe</a></h1>
+        <p>Rich stew of beef, potatoes, carrots, bell peppers, and tomato-based sauce.</p>
+        <hr>
+
+        <!--Kare-Kare-->
+        <img class="pics" src="pics/b4.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. 1 kg oxtail (or beef shank, tripe)</p>
+    <p>b. 2 cups peanut butter</p>
+    <p>c. 1/2 cup toasted rice flour</p>
+    <p>d. 2 tablespoons annatto oil</p>
+                <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Kare-Kare</b><a class="btn" href="beef.html#kare-kare">See Recipe</a></h1>
+        <p>Creamy peanut sauce stew with oxtail, tripe, vegetables, and bagoong on the side.</p>
+        <hr>
+
+        <!--Beef Bulalo-->
+        <img class="pics" src="pics/b5.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+               <p>a. 1 kg beef shank</p>
+    <p>b. Corn on the cob (cut into pieces)</p>
+    <p>c. Cabbage</p>
+    <p>d. Pechay (bok choy)</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Beef Bulalo</b><a class="btn" href="beef.html#bulalo">See Recipe</a></h1>
+        <p>Savory beef shank and bone marrow soup with corn, vegetables, and a rich broth.</p>
+    </div>
+
+<!--Seafood Dishes-->
+    <div id="Seafood" class="menu-section">
+
+        <!--Daing na Bangus-->
+        <img class="pics" src="pics/f1.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. 1 medium milkfish, butterflied</p>
+    <p>b. 1/2 cup vinegar</p>
+    <p>c. 4 cloves garlic, minced</p>
+    <p>d. 1 tsp black pepper</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <h1><b>Daing na Bangus</b><a class="btn" href="seafood.html#daing-na-bangus">See Recipe</a></h1>
+        <p>Salted and marinated fried milkfish with a crispy, savory texture.</p>
+        <hr>
+        
+        <!--Kinilaw na Tuna-->
+        <img class="pics" src="pics/f2.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. 1 lb fresh tuna, cubed</p>
+    <p>b. 1/2 cup vinegar</p>
+    <p>c. 1 medium onion, chopped</p>
+    <p>d. 2 thumb-sized ginger, minced</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Kinilaw na Tuna</b><a class="btn" href="seafood.html#kinilaw-na-tuna">See Recipe</a></h1>
+        <p>Fresh tuna marinated in vinegar, calamansi, and spices with a tangy, zesty flavor.</p>
+        <hr>
+
+        <!--Rellenong Bangus-->
+        <img class="pics" src="pics/f3.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                <p>a. 1 medium milkfish (bangus)</p>
+    <p>b. 1 medium onion, chopped</p>
+    <p>c. 2 cloves garlic, minced</p>
+    <p>d. 1 carrot, diced</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Rellenong Bangus</b><a class="btn" href="seafood.html#rellenong-bangus">See Recipe</a></h1>
+        <p>Stuffed milkfish with a savory filling of garlic, onions, tomatoes, and vegetables, then fried to crispy perfection.</p>
+        <hr>
+
+        <!--Sinaing na Tulingan-->
+        <img class="pics" src="pics/f4.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                 <p>a. 2 medium mackerel tuna (tulingan)</p>
+    <p>b. 1 cup dried kamias</p>
+    <p>c. 1/2 cup pork fat, sliced</p>
+    <p>d. 4 cups water</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Sinaing na Tulingan</b><a class="btn" href="seafood.html#sinaing-na-tulingan">See Recipe</a></h1>
+        <p>Slow-cooked bullet tuna simmered in tangy tamarind and salty dried kamias.</p>
+        <hr>
+
+        <!--Sinigang na Hipon-->
+        <img class="pics" src="pics/f5.jpg">
+        <div class="ing">
+            <h4>Ingredients:</h4> 
+                 <p>a. 1 lb shrimp</p>
+    <p>b. 8 cups water</p>
+    <p>c. 1 medium tomato, quartered</p>
+    <p>d. 1 medium onion, quartered</p>
+                        <p>...</p>
+        </div>
+        <br>
+        <br>
+        <h1><b>Sinigang na Hipon</b><a class="btn" href="seafood.html#sinigang-na-hipon">See Recipe</a></h1>
+        <p>Tangy shrimp soup with tamarind broth and assorted vegetables.</p>
+    </div>
+    </div>
+  </div>
+
+
+<!-- Spacer using <br> elements to provide visual separation -->
+<br> <br> <br> <br> <br> <br> <br> <br>
+
+<center>
+
+<!-- Footer Section -->
+    <div class="footer">
+        <img src="logo.png" class="ficon">
+        <span class="flogo">CookingIna (2024).</span>
+    </div>
+
+</center>
+
+<!-- Linking external JavaScript file for interactive functionalities -->
+<script src="script.js"></script>
+
+</body>
+</html>

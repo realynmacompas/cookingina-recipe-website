@@ -1,0 +1,429 @@
+/* =====================================================================
+   COOKINGINA — MENU PAGE (menu.html)
+   Design system: Gold + Cream + Forest Green accents
+   Fonts: Playfair Display (headings) / Poppins (body)
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --gold: #FAC000;
+  --gold-deep: #D9A404;
+  --gold-soft: #FFF4D6;
+  --cream: #FFFDF7;
+  --forest: #2E6F40;
+  --forest-dark: #1F4D2C;
+  --ink: #2B2118;
+  --white: #FFFFFF;
+  --shadow: 0 4px 16px rgba(43, 33, 24, 0.12);
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  margin: 0;
+}
+
+p { font-size: 16px; line-height: 1.6; }
+
+img { max-width: 100%; display: block; }
+
+/* =====================================================================
+   HEADER / NAVBAR
+   ===================================================================== */
+.header {
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+
+.icon { display: flex; align-items: center; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-size: clamp(20px, 3vw, 28px);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+/* logo.png isn't present in this project's assets — hide the broken/missing
+   image instead of showing a blank icon; the wordmark text still shows. */
+.logo img { display: none; }
+
+.menu { height: auto; }
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* the original markup includes one empty placeholder <li> (the first
+   slot is now used for the HOME link) */
+.menu ul li:nth-child(2) { display: none; }
+
+.menu ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.menu ul li a:hover { color: var(--forest-dark); }
+
+/* =====================================================================
+   HERO CAROUSEL
+   ===================================================================== */
+.home {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 60vh, 560px);
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.slider,
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeZoom 6s ease;
+}
+
+@keyframes fadeZoom {
+  0%   { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* dark gradient so the caption text stays readable over any photo */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.05) 100%);
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px; /* keeps the caption clear of the prev/next arrows on both sides */
+}
+
+.caption {
+  max-width: 560px;
+  margin: 0 auto;      /* center the caption block within the slide */
+  text-align: center;  /* center the title, text, and button */
+}
+
+.caption h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.caption p {
+  font-size: clamp(15px, 2vw, 19px);
+  color: var(--white);
+  margin: 0 0 22px;
+}
+
+.caption a {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--forest);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
+}
+
+.caption a:hover {
+  background: var(--gold);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* Prev / Next controls */
+.controls .prev,
+.controls .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  background: var(--gold);
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.controls .prev big,
+.controls .next big { font-size: inherit; }
+
+.controls .prev { left: 16px; }
+.controls .next { right: 16px; }
+
+.controls .prev:hover,
+.controls .next:hover {
+  background: var(--forest);
+  color: var(--white);
+}
+
+/* =====================================================================
+   LOGIN ICON — hidden: the ionicons glyph wasn't rendering and left
+   a blank "ghost" white circle in the corner.
+   ===================================================================== */
+.login-icon { display: none; }
+
+/* =====================================================================
+   MENU CONTAINER (tabs + dish list)
+   ===================================================================== */
+.menu-container {
+  width: 100%;
+  padding: 56px 24px 40px;
+  background: linear-gradient(180deg, var(--gold-soft), var(--cream) 40%);
+}
+
+.content { max-width: 900px; margin: 0 auto; }
+
+.title {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--forest-dark);
+  margin-bottom: 32px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white);
+  border-radius: 999px;
+  padding: 6px;
+  box-shadow: var(--shadow);
+  margin-bottom: 32px;
+}
+
+.tab {
+  flex: 1 1 auto;
+  min-width: 100px;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.tab:hover { background: var(--gold-soft); }
+.tab:active { transform: scale(0.97); }
+
+/* JS toggles this class on the active tab */
+.tab.w3-red {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* Menu sections (dish list per category) */
+.menu-section {
+  display: none;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.menu-section > br { display: none; } /* spacing now handled by layout, not <br> */
+
+.menu-section p { margin: 8px 0 0; color: #4a4033; }
+
+/* Each dish row: image + ingredients + title/description stack cleanly.
+   .pics floats beside .ing, then everything from the title onward is
+   forced onto a fresh line with clear:both so nothing gets squeezed
+   into the leftover space next to the photo. */
+.pics {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: left;
+  margin: 0 24px 12px 0;
+  border: 4px solid var(--gold-soft); /* soft ring so the photo reads clearly against the white card */
+  box-shadow: var(--shadow);
+}
+
+.ing {
+  overflow: hidden; /* sit neatly beside the floated photo */
+  padding-top: 2px;
+  text-align: left;
+}
+
+.ing h4 {
+  font-size: 1.05rem;
+  color: var(--forest);
+  margin: 0 0 10px;
+}
+
+.ing p { margin: 6px 0; font-size: 14.5px; }
+
+.menu-section h1 {
+  clear: both;         /* always start below the photo + ingredients, never beside them */
+  display: block;
+  font-size: 1.4rem;
+  margin: 18px 0 8px;
+  padding-top: 6px;
+}
+
+.menu-section hr {
+  clear: both;
+  border: none;
+  border-top: 1px dashed var(--gold-deep);
+  margin: 28px 0;
+}
+
+/* "See Recipe" button — a single <a>, styled as a pill button
+   (previously nested inside a <button>, which is invalid HTML and
+   made the actual clickable area unpredictable across browsers) */
+.btn {
+  border: none;
+  display: inline-block;
+  float: right;
+  background: var(--forest);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease, color 0.15s ease;
+}
+
+.btn:active { transform: scale(0.96); }
+
+.btn:hover { background: var(--gold-deep); color: var(--ink); }
+
+.description { color: #555; }
+
+/* =====================================================================
+   FOOTER
+   ===================================================================== */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 26px 20px;
+  background: var(--gold); /* solid, matching the header's gold */
+}
+
+/* logo.png is missing from the project assets — hide the broken image,
+   keep just the wordmark text. */
+.ficon { display: none; }
+
+.flogo {
+  font-family: 'Playfair Display', serif;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =====================================================================
+   RESPONSIVE
+   ===================================================================== */
+@media screen and (max-width: 992px) {
+  .navbar { justify-content: center; text-align: center; }
+  .caption { max-width: 100%; }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar { padding: 12px 16px; }
+  .menu ul { justify-content: center; gap: 6px 16px; }
+  .home { height: 340px; }
+  .container { padding: 0 56px; } /* clear of the smaller mobile arrows on both sides */
+  .caption p { display: none; } /* keep the mobile hero compact */
+
+  .controls .prev,
+  .controls .next { width: 34px; height: 34px; font-size: 15px; }
+  .controls .prev { left: 10px; }
+  .controls .next { right: 10px; }
+
+  .menu-container { padding: 40px 16px 28px; }
+  .tab { min-width: 88px; padding: 10px 12px; font-size: 14px; }
+
+  .pics {
+    float: none;
+    width: 100%;
+    height: 200px;
+    border-radius: var(--radius);
+    margin: 0 0 14px;
+  }
+
+  .ing { overflow: visible; }
+
+  .menu-section h1 { display: block; margin-bottom: 6px; }
+  .menu-section h1 .btn { display: block; float: none; width: fit-content; margin-top: 8px; }
+}
