@@ -138,6 +138,10 @@ body {
     .section h2 { font-size: 42px; }
     .icons { margin-top: 20px; width: auto; justify-content: center; }
     .icons1 { justify-content: center; }
+
+    .section, .member { box-sizing: border-box; } /* keep padding inside the 90% width */
+    .member-content > br { display: none; } /* the stacked <br> tags leave a big gap on small screens */
+    .member h2 { margin: 8px 0 12px; }
 }
 
 @media screen and (max-width: 600px) {
@@ -147,4 +151,5 @@ body {
     .section p { font-size: 17px; }
     .member img { width: 160px; height: 160px; }
     .member h2 { font-size: 24px; }
+    .section p, .member p { text-align: left; line-height: 1.6; } /* long centered paragraphs are hard to read on phones */
 }

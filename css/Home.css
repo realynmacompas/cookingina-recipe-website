@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* the spinning dish image extends past the right edge; hide that instead of showing a sideways scrollbar */
 }
 
 /* Home section styles */
@@ -212,6 +213,9 @@ ul li a:hover {
     .content span { font-size: 34px; }
     .content .par { padding-left: 12px; font-size: 15px; }
     .content .cn { margin-left: 12px; }
+    ul { padding-left: 0; }
+    ul li { margin-top: 4px; margin-right: 20px; }
+    ul li a { display: inline-block; padding: 10px 0; } /* easier to tap */
     .login-icon { top: 12px; right: 16px; width: 42px; height: 42px; }
     .login-icon ion-icon { font-size: 34px; }
 }
