@@ -1,83 +1,97 @@
-# 🍳 Cooking Ina – Filipino Recipe Website
+# 🍳 CookingIna: Filipino Recipe Website
 
-A responsive recipe website that celebrates Filipino cuisine by providing easy access to traditional and modern recipes. Cooking Ina helps users discover authentic Filipino dishes while enhancing their culinary experience through an intuitive interface and AI-inspired cooking assistance.
+A responsive recipe website featuring traditional Filipino dishes. Visitors can browse recipes by category, read the ingredients and cooking steps for each dish, and learn about the history and regional food of the Philippines.
 
 > **Project Type:** Academic Web Development Project
 
----
-
-## 🌟 Overview
-
-Cooking Ina is designed to make Filipino cooking more accessible and enjoyable. The website allows users to browse recipes, explore different food categories, and discover traditional dishes through a clean and responsive interface.
+🌐 **Live Demo:** https://cookingina-recipe-website.vercel.app/
 
 ---
 
 ## ✨ Features
 
-- Browse a collection of Filipino recipes
-- Explore recipes by food category
-- View ingredients and cooking procedures
-- Responsive and user-friendly interface
-- AI-inspired culinary assistance concept
-- Recipe request and review sections
-- Modern and visually appealing website design
+- **Recipe menu** with an image slider and category tabs (Vegetable, Chicken, Pork, Beef, Seafood)
+- **Recipe pages** for each category, with ingredients and step-by-step directions for 25 dishes
+- **History page** with a timeline of how Filipino cuisine changed from the pre-colonial era to today
+- **Learn More page** covering regional dishes from Luzon, Visayas, and Mindanao, with an embedded map
+- **About Us page** introducing the project team
+- **Contact page** with a message form (front-end only; the form shows a confirmation but does not send messages)
+- **Responsive layout** that works on phones, tablets, and desktops
 
 ---
 
 ## 🛠️ Technologies Used
 
-### Front-End
 - HTML5
-- CSS3
-- JavaScript
+- CSS3 (media queries for responsive design)
+- JavaScript (image slider, menu tabs, back-to-top button)
+- [Ionicons](https://ionic.io/ionicons) and Google Fonts
+- Git and GitHub
+- Vercel (deployment)
 
-### Development Tools
-- Visual Studio Code
-- Git & GitHub
-- Vercel (Deployment)
+---
+
+## 📁 Project Structure
+
+```
+cookingina-recipe-website/
+├── index.html          Home page
+├── menu.html           Recipe menu with category tabs
+├── beef.html           Recipe pages by category
+├── chicken.html
+├── pork.html
+├── seafood.html
+├── vegetable.html
+├── History.html        History of Filipino cuisine
+├── LearnMore.html      Regional dishes
+├── Aboutus.html        Project team
+├── Contacts.html       Contact form
+├── favicon.ico
+├── css/                Stylesheets
+├── js/                 Scripts for the slider and menu tabs
+└── images/             Site images
+    └── recipes/        Recipe photos
+```
 
 ---
 
 ## 👩‍💻 My Contributions
 
-- Designed and developed responsive web pages using HTML5, CSS3, and JavaScript.
-- Created an intuitive user interface focused on improving recipe browsing and user experience.
-- Organized website structure, recipe categories, and interactive elements.
+- Designed and developed web pages using HTML5, CSS3, and JavaScript.
+- Built the recipe menu, including the category tabs and recipe navigation.
+- Organized the website structure and recipe categories.
 - Participated in testing, debugging, and project documentation.
 
----
+### Updates after the original submission
 
-## 📸 Live Demo
-
-🌐 **Website:** https://cookingina-site.vercel.app/
+- Fixed broken image and file paths and organized the files into `css/`, `js/`, and `images/` folders.
+- Removed duplicate and unused images, reducing the project size from about 31 MB to 17 MB.
+- Improved the mobile layout (viewport settings, layouts that fit small screens, larger tap targets, tap-to-call and tap-to-email links).
+- Added a favicon and a "Home" link on pages that had no navigation.
 
 ---
 
 ## 📷 Screenshots
 
-> Screenshots will be added soon.
-
-Suggested screenshots:
-- Home Page
-- Featured Recipes
-- Recipe Categories
-- Recipe Details
-- AI Feature Section
-- Contact/Footer
+<img width="1903" height="783" alt="image" src="https://github.com/user-attachments/assets/13969b53-ba85-436c-9ad7-691561448d24" />
+<img width="1902" height="879" alt="image" src="https://github.com/user-attachments/assets/c924df62-08b2-442f-b078-f2a42f9e1ce7" />
+<img width="1903" height="860" alt="image" src="https://github.com/user-attachments/assets/86123ec6-651b-4134-b98f-2163aa4b0261" />
+<img width="1903" height="897" alt="image" src="https://github.com/user-attachments/assets/4caa9100-70d7-4023-93ae-55083d4fafe7" />
 
 ---
 
-## 🚀 Installation
+## 🚀 Running Locally
 
 1. Clone the repository.
 
-```bash
-git clone https://github.com/realynmacompas/cookingina-recipe-website.git
-```
+   ```bash
+   git clone https://github.com/realynmacompas/cookingina-recipe-website.git
+   ```
 
-2. Open the project folder.
+2. Open the project folder in VS Code.
+3. Right-click `index.html` and choose **Open with Live Server**, or open `index.html` directly in a browser.
 
-3. Open `index.html` in your preferred web browser.
+No build step or installation is required.
 
 ---
 
@@ -89,4 +103,4 @@ git clone https://github.com/realynmacompas/cookingina-recipe-website.git
 
 ## 📄 Disclaimer
 
-This repository showcases an academic web development project created for educational and portfolio purposes. All trademarks, images, and content belong to their respective owners where applicable.
+This repository showcases an academic web development project created for educational and portfolio purposes. Recipe images and referenced content belong to their respective owners.
