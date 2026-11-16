@@ -9,7 +9,7 @@ body {
 /* Home Section */
 .home {
     width: 100%; /* Full width for the home section */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url(images/veg.jpg); /* Background image with gradient */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url(../images/veg.jpg); /* Background image with gradient */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */

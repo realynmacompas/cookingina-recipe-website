@@ -9,7 +9,7 @@ body {
 /* Background design */
 #bg_design {
     width: 100%; /* Full width */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/veg.jpg); /* Gradient and image */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/veg.jpg); /* Gradient and image */
     background-position: center; /* Center image */
     background-size: cover; /* Cover area */
     height: 105vh; /* Full height */

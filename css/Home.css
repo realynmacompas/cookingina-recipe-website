@@ -7,7 +7,7 @@ body {
 /* Home section styles */
 .home {
     width: 100%; /* Full width */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/veg.jpg); /* Background image with gradient */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/veg.jpg); /* Background image with gradient */
     background-position: center; /* Center the background */
     background-size: cover; /* Cover the entire area */
     height: 105vh; /* Full viewport height */

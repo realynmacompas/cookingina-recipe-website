@@ -5,7 +5,7 @@ body {
     font-family: 'Georgia', serif; /* Font style */
     margin: 0; /* No margin */
     padding: 0; /* No padding */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(images/veg.jpg); /* Background image with gradient */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(../images/veg.jpg); /* Background image with gradient */
     color: white; /* Text color */
 }
 
