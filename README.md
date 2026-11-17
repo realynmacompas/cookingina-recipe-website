@@ -73,10 +73,10 @@ cookingina-recipe-website/
 
 ## 📷 Screenshots
 
-<img width="1903" height="783" alt="image" src="https://github.com/user-attachments/assets/13969b53-ba85-436c-9ad7-691561448d24" />
-<img width="1902" height="879" alt="image" src="https://github.com/user-attachments/assets/c924df62-08b2-442f-b078-f2a42f9e1ce7" />
-<img width="1903" height="860" alt="image" src="https://github.com/user-attachments/assets/86123ec6-651b-4134-b98f-2163aa4b0261" />
-<img width="1903" height="897" alt="image" src="https://github.com/user-attachments/assets/4caa9100-70d7-4023-93ae-55083d4fafe7" />
+<img width="1173" height="730" alt="image" src="https://github.com/user-attachments/assets/43f791f0-c393-472b-b6b7-0ed64e26b81f" />
+<img width="1168" height="732" alt="image" src="https://github.com/user-attachments/assets/ee6eb9eb-aeb6-4722-bd84-a52a0a5ef097" />
+<img width="1174" height="727" alt="image" src="https://github.com/user-attachments/assets/f212d156-27cb-4ff2-aa6d-9cf8978e8931" />
+<img width="1167" height="726" alt="image" src="https://github.com/user-attachments/assets/a4097eb4-6774-48ff-be09-45e3e388f96f" />
 
 ---
 
